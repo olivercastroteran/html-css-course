@@ -27,17 +27,13 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
 nav {
   font-size: 18px;
   /* text-align: center; */
-}
-
-article {
-  margin-bottom: 60px;
 }
 
 .post-header {
@@ -136,10 +132,6 @@ li:last-child {
   margin-left: 0;
 }
 
-/* body {
-  /* background-color: orangered;
-} */
-
 /* .first-li {
   font-weight: bold;
 } */
@@ -151,10 +143,6 @@ li:first-child {
 li:last-child {
   font-style: italic;
 }
-
-/* li:nth-child(even) {
-  /* color: red; 
-} */
 
 /* Misconception: this won't work! */
 article p:first-child {
@@ -196,8 +184,7 @@ nav a:link {
 
   display: block; */
 
-  /* margin-right: 30px;
-  margin-top: 10px; */
+  margin-right: 30px;
   display: inline-block;
 }
 
@@ -221,8 +208,8 @@ h1::first-letter {
   font-style: normal;
   margin-right: 5px;
 }
-
-/* h3 + p::first-line {
+/* 
+h3 + p::first-line {
   /* color: red;
 } */
 
@@ -292,9 +279,9 @@ nav {
 }
 
 .clearfix::after {
-  content: '';
-  display: block;
   clear: both;
+  content: "";
+  display: block;
 }
 
 article {
@@ -311,22 +298,23 @@ footer {
   clear: both;
 }
 */
+
 /* FLEXBOX */
 .main-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .author-box {
   display: flex;
   align-items: center;
-  gap: 15px;
   margin-bottom: 15px;
 }
 
 .author {
   margin-bottom: 0;
+  margin-left: 15px;
 }
 
 .related-post {
@@ -339,8 +327,9 @@ footer {
 .related-link:link {
   font-size: 17px;
   font-weight: bold;
-  display: block;
+  font-style: normal;
   margin-bottom: 5px;
+  display: block;
 }
 
 .related-author {
@@ -350,7 +339,8 @@ footer {
   font-style: italic;
 }
 
-.row {
+/* FLEXBOX LAYOUT */
+/* .row {
   display: flex;
   align-items: flex-start;
   gap: 75px;
@@ -363,5 +353,35 @@ article {
 }
 
 aside {
+  
+  DEFAULTS:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
   flex: 0 0 300px;
+} */
+
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1 / span 2; */
+  grid-column: 1 / -1;
+}
+
+/* article {
+}
+
+aside {
+} */
+
+footer {
+  grid-column: 1 / -1;
 }
