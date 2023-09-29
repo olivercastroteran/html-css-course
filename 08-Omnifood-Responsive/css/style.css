@@ -1,14 +1,13 @@
-/**************************/
+/*************************/
 /* HEADER */
-/**************************/
+/*************************/
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: #fdf2e9;
-
-  /* Because we want header to be sticky later */
+  /* Because we want the navigation to be sticky */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
@@ -17,9 +16,9 @@
   height: 2.2rem;
 }
 
-/**************************/
+/*************************/
 /* NAVIGATION */
-/**************************/
+/*************************/
 
 .main-nav-list {
   list-style: none;
@@ -40,7 +39,7 @@
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #cf711f;
+  color: #ef711f;
 }
 
 .main-nav-link.nav-cta:link,
@@ -53,12 +52,12 @@
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-color: #cf711f;
+  background-color: #ef711f;
 }
 
-/**************************/
+/*************************/
 /* HERO SECTION */
-/**************************/
+/*************************/
 
 .section-hero {
   background-color: #fdf2e9;
@@ -67,12 +66,12 @@
 
 .hero {
   max-width: 130rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
   align-items: center;
+  gap: 9.6rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .hero-description {
@@ -114,13 +113,13 @@
 }
 
 .delivered-text span {
-  color: #cf711f;
+  color: #ef711f;
   font-weight: 700;
 }
 
-/**************************/
+/*************************/
 /* FEATURED IN SECTION */
-/**************************/
+/*************************/
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -144,12 +143,12 @@
 .logos img {
   height: 3.2rem;
   filter: brightness(0);
-  opacity: 50%;
+  opacity: 0.5;
 }
 
-/**************************/
+/*************************/
 /* HOW IT WORKS SECTION */
-/**************************/
+/*************************/
 
 .section-how {
   padding: 9.6rem 0;
@@ -168,17 +167,17 @@
 }
 
 .step-img-box {
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .step-img-box::before,
 .step-img-box::after {
-  content: "";
+  content: '';
   display: block;
+
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -189,10 +188,8 @@
 .step-img-box::before {
   width: 60%;
   /* height: 60%; */
-
-  /* 60% of parent's width */
+  /* 60% of parent's widht */
   padding-bottom: 60%;
-
   background-color: #fdf2e9;
   z-index: -2;
 }
@@ -206,13 +203,11 @@
 
 .step-img {
   width: 35%;
-  /* z-index: 10; */
 }
 
-/**************************/
+/*************************/
 /* MEALS SECTION */
-/**************************/
-
+/*************************/
 .section-meals {
   padding: 9.6rem 0;
 }
@@ -252,9 +247,11 @@
 .tag--vegetarian {
   background-color: #51cf66;
 }
+
 .tag--vegan {
-  background-color: #94d82d;
+  background-color: #94d8d2;
 }
+
 .tag--paleo {
   background-color: #ffd43b;
 }
@@ -280,14 +277,14 @@
   gap: 1.6rem;
 }
 
+.meal-img {
+  width: 100%;
+}
+
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
   color: #e67e22;
-}
-
-.meal-img {
-  width: 100%;
 }
 
 .all-recipes {
@@ -295,10 +292,9 @@
   font-size: 1.8rem;
 }
 
-/**************************/
+/*************************/
 /* TESTIMONIALS SECTION */
-/**************************/
-
+/*************************/
 .section-testimonials {
   background-color: #fdf2e9;
   display: grid;
@@ -312,9 +308,8 @@
 
 .testimonials {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 4.8rem;
-  column-gap: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem 8rem;
 }
 
 .testimonial-img {
@@ -323,7 +318,7 @@
   margin-bottom: 1.2rem;
 }
 
-.testimonial-text {
+.testimonial-txt {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 1.6rem;
@@ -343,55 +338,54 @@
 
 .gallery-item {
   overflow: hidden;
+  background-color: #000;
 }
 
 .gallery-item img {
   display: block;
   width: 100%;
+  opacity: 0.75;
   transition: all 0.4s;
 }
 
 .gallery-item img:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
 
-/**************************/
-/* MEALS SECTION */
-/**************************/
-
+/*************************/
+/* PRICING SECTION */
+/*************************/
 .section-pricing {
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
-
-  width: 75%;
-}
-
-.princing-plan--starter {
-  justify-self: end;
-  border: 2px solid #fdf2e9;
-  padding: 4.6rem;
-}
-
-.princing-plan--complete {
-  background-color: #fdf2e9;
   padding: 4.8rem;
+  width: 75%;
+  border: 2px solid #fdf2e9;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete::after {
-  content: "Best value";
+.pricing-plan--complete::after {
+  content: 'Best Value';
   position: absolute;
   top: 6%;
-  right: -18%;
-
+  right: -19%;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #333;
+  column-rule: #333;
   background-color: #ffd43b;
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
@@ -403,7 +397,7 @@
 }
 
 .plan-name {
-  color: #cf711f;
+  color: #ef711f;
   font-weight: 600;
   font-size: 2rem;
   text-transform: uppercase;
@@ -424,13 +418,13 @@
   margin-right: 0.8rem;
 }
 
-.plan-text {
+.plan-txt {
   font-size: 1.6rem;
   line-height: 1.6;
   color: #6f6f6f;
 }
 
-.plan-sing-up {
+.plan-sign-up {
   text-align: center;
   margin-top: 4.8rem;
 }
@@ -441,6 +435,9 @@
   text-align: center;
 }
 
+/*************************/
+/* FEATURE SECTION */
+/*************************/
 .feature-icon {
   color: #e67e22;
   height: 3.2rem;
@@ -448,7 +445,7 @@
   background-color: #fdf2e9;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
-  border-radius: 50%;
+  border: 50%;
 }
 
 .feature-title {
@@ -458,46 +455,38 @@
   margin-bottom: 1.6rem;
 }
 
-.feature-text {
+.feature-txt {
   font-size: 1.8rem;
   line-height: 1.8;
 }
 
-/**************************/
-/* CTA SECTION */
-/**************************/
-
+/*************************/
+/* FEATURE SECTION */
+/*************************/
 .section-cta {
-  /* top / right / bottom / left */
-  /* padding: 9.6rem 0 12.8rem 0; */
-
-  /* top / horizontal / left */
-  padding: 4.8rem 0 12.8rem;
+  padding: 4.8rem 0 12.8rem 0;
 }
 
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
   /* background-color: #e67e22; */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
-
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
 }
 
-.cta-text-box {
-  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+.cta .heading-secondary {
   color: #45260a;
 }
 
-.cta .heading-secondary {
-  /* color: #45260a; */
-  color: inherit;
-  margin-bottom: 3.2rem;
+.cta-txt-box {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
 
-.cta-text {
+.cta-txt {
   font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 4.8rem;
@@ -509,8 +498,8 @@
       rgba(235, 151, 78, 0.35),
       rgba(230, 125, 34, 0.35)
     ),
-    url("../img/eating.jpg");
-  background-size: cover;
+    url(../img/eating.jpg);
+  background-size: contain;
   background-position: center;
 }
 
@@ -550,9 +539,9 @@
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
-/**************************/
+/*************************/
 /* FOOTER */
-/**************************/
+/*************************/
 
 .footer {
   padding: 12.8rem 0;
@@ -586,8 +575,8 @@
 
 .copyright {
   font-size: 1.4rem;
-  line-height: 1.6;
   color: #767676;
+  line-height: 1.6;
   margin-top: auto;
 }
 
