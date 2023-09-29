@@ -10,6 +10,7 @@
   /* Because we want the navigation to be sticky */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -53,6 +54,27 @@
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
   background-color: #ef711f;
+}
+
+/*************************/
+/* MOBILE NAV */
+/*************************/
+
+.btn-mobile-nav {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name='close-outline'] {
+  display: none;
 }
 
 /*************************/
@@ -444,6 +466,7 @@
   width: 3.2rem;
   background-color: #fdf2e9;
   margin-bottom: 3.2rem;
+  border-radius: 50%;
   padding: 1.6rem;
   border: 50%;
 }
